@@ -12,6 +12,7 @@ class Main {
     String str1 = input.nextLine();
     System.out.print("Enter second String: ");
     String str2 = input.nextLine();
+    String str3 = input.nextLine();
 
     // check if length is same
     if(str1.length() == str2.length()) {
@@ -19,6 +20,7 @@ class Main {
       // convert strings to char array
       char[] charArray1 = str1.toCharArray();
       char[] charArray2 = str2.toCharArray();
+      char[] charArray2 = str3.toCharArray();
 
       // sort the char array
       Arrays.sort(charArray1);
@@ -26,13 +28,13 @@ class Main {
 
       // if sorted char arrays are same
       // then the string is anagram
-      boolean result = Arrays.equals(charArray1, charArray2);
+      boolean result = Arrays.equals(charArray1, charArray2, charArray3);
 
       if(result) {
         System.out.println(str1 + " and " + str2 + " are anagram.");
       }
       else {
-        System.out.println(str1 + " and " + str2 + " are not anagram.");
+        System.out.println(str1 + " and " + str2 + " are also not anagram.");
       }
     }
     else {
